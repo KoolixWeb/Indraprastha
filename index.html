@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indraprastha Events</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .festive-bg {
+            background-image: url('images\\Wedd_Decoration.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+            background-color: rgba(0,0, 0,0.5);   
+        }
+        @keyframes border-dance {
+            0% {
+                clip-path: inset(0 0 95% 0);
+            }
+            12.5% {
+                clip-path: inset(0 95% 0 0);
+            }
+            25% {
+                clip-path: inset(95% 0 0 0);
+            }
+            37.5% {
+                clip-path: inset(0 0 0 95%);
+            }
+            50% {
+                clip-path: inset(0 0 95% 0);
+            }
+            62.5% {
+                clip-path: inset(0 95% 0 0);
+            }
+            75% {
+                clip-path: inset(95% 0 0 0);
+            }
+            87.5% {
+                clip-path: inset(0 0 0 95%);
+            }
+            100% {
+                clip-path: inset(0 0 95% 0);
+            }
+        }
+
+        .animate-border-dance {
+            animation: border-dance 8s linear forwards;
+            pointer-events: none;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    
+<!-- Cursor ai code -->
+<header class="bg-purple-900 text-white p-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Indraprastha Events</h1>
+        
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-button" class="md:hidden p-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+
+        <!-- Navigation menu - hidden on mobile by default -->
+        <nav id="nav-menu" class="hidden md:block absolute md:relative top-16 md:top-0 left-0 right-0 md:left-auto md:right-auto bg-purple-900 md:bg-transparent p-4 md:p-0">
+            <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
+                <li><a href="#home" class="block hover:text-yellow-300">Home</a></li>
+                <li><a href="#services" class="block hover:text-yellow-300">Services</a></li>
+                <li><a href="#booking" class="block hover:text-yellow-300">Book Now</a></li>
+                <li><a href="#about" class="block hover:text-yellow-300">About Us</a></li>
+                <li><a href="#contact" class="block hover:text-yellow-300">Contact</a></li>
+            </ul>
+        </nav>
+
+        <select id="language-select" class="bg-red-700 text-white p-2 rounded">
+            <option value="en">English</option>
+            <option value="kn">Kannada</option>
+        </select>
+    </div>
+</header>
+<main>
+        <!-- Home Section -->
+        <section id="home" class="festive-bg text-white py-20 h-screen festive-bg text-white flex items-center justify-center">
+            <div class="container mx-auto text-center ">
+                <h2 class="text-4xl font-bold mb-4 text-white-600  p-2 rounded-full bg-opacity-50 inline-block">Celebrate Life's Special Moments</h2>
+                <p class="text-2xl font-bold mb-8 text-white-950">Your one-stop solution for unforgettable events in Karnataka</p>
+                <div class="space-x-4">
+                    <a href="#booking" class="bg-blue-100 text-red-800 px-6 py-3 rounded-full font-semibold hover:bg-yellow-400 transition duration-300">Book Now</a>
+                    <a href="#services" class="bg-white text-red-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">Explore Services</a>
+                </div>
+                
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-16 bg-gray-100">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:bg-purple-50">
+                        <a href="marriage-services.html" class="block">
+                            <img src="images\wedding-affair-medium-1.png" alt="Marriage" class="w-full h-48 object-cover rounded-md mb-4 transition duration-300 hover:opacity-90">
+                            <h3 class="text-xl font-semibold mb-2">Marriage</h3>
+                            <p>We arrange everything perfectly according to your plan.</p>
+                        </a>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:bg-purple-50">
+                        <a href="engagement-services.html" class="block">
+                            <img src="images\engagement.jpg" alt="Engagement" class="w-full h-48 object-cover rounded-md mb-4 transition duration-300 hover:opacity-90">
+                            <h3 class="text-xl font-semibold mb-2">Engagement</h3>
+                            <p>Celebrate your engagement with unforgettable moments.</p>
+                        </a>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:bg-purple-50">
+                        <a href="bride-groom-services.html" class="block">
+                            <img src="images\bride to be.jpg" alt="Bride to be / Groom to be" class="w-full h-48 object-cover rounded-md mb-4 transition duration-300 hover:opacity-90">
+                            <h3 class="text-xl font-semibold mb-2">Bride to be / Groom to be</h3>
+                            <p>Creating cherished moments for the couple-to-be.</p>
+                        </a>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:bg-purple-50">
+                        <a href="haldi-services.html" class="block">
+                            <img src="images\Haladi ceremony.jpg" alt="Haldhi Ceremony" class="w-full h-48 object-cover rounded-md mb-4 transition duration-300 hover:opacity-90">
+                            <h3 class="text-xl font-semibold mb-2">Haldhi Ceremony</h3>
+                            <p>Brighten their Haldi ceremony with our special touch.</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-3">
+                    <div class="bg-white p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:bg-purple-50">
+                        <a href="baby-shower-services.html" class="block">
+                            <img src="images\Baby-Shower-.jpg" alt="Baby Shower" class="w-full h-48 object-cover rounded-md mb-4 transition duration-300 hover:opacity-90">
+                            <h3 class="text-xl font-semibold mb-2">Baby Shower</h3>
+                            <p>We arrange everything perfectly according to your plan.</p>
+                        </a>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:bg-purple-50">
+                        <a href="naming-ceremony-services.html" class="block">
+                            <img src="images\Naming_ceremony.jpg" alt="Naming Ceremony" class="w-full h-48 object-cover rounded-md mb-4 transition duration-300 hover:opacity-90">
+                            <h3 class="text-xl font-semibold mb-2">Naming Ceremony</h3>
+                            <p>Celebrate your special day with unforgettable moments.</p>
+                        </a>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:bg-purple-50">
+                        <a href="birthday-services.html" class="block">
+                            <img src="images\birthday-photo.jpg" alt="Birthday" class="w-full h-48 object-cover rounded-md mb-4 transition duration-300 hover:opacity-90">
+                            <h3 class="text-xl font-semibold mb-2">Birthday</h3>
+                            <p>Creating cherished moments for your special day.</p>
+                        </a>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:bg-purple-50">
+                        <a href="haldi-services.html" class="block">
+                            <img src="images\Haladi ceremony.jpg" alt="Haldhi Ceremony" class="w-full h-48 object-cover rounded-md mb-4 transition duration-300 hover:opacity-90">
+                            <h3 class="text-xl font-semibold mb-2">Haldhi Ceremony</h3>
+                            <p>Brighten their Haldi ceremony with our special touch.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section id="booking" class="py-16 bg-red-50">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12">Book Your Event</h2>
+                <form class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
+                    <div class="mb-4">
+                        <label for="event-type" class="block mb-2 font-semibold">Event Type</label>
+                        <select id="event-type" name="event-type" class="w-full p-2 border rounded">
+                            <option value="">Select Event Type</option>
+                            <option value="Marriage">Marriage</option>
+                            <option value="Engagement">Engagement</option>
+                            <option value="Bride to be">Bride to be / Groom to be</option>
+                            <option value="Haldhi Ceremony">Haldhi Ceremony</option>
+                            <option value="Baby Shower">Baby Shower</option>
+                            <option value="Naming Ceremony">Naming Ceremony</option>
+                            <option value="Birthday">Birthday</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block mb-2 font-semibold">Services Needed</label>
+                        <div class="space-y-2">
+                            <label class="flex items-center">
+                                <input type="checkbox" name="services[]" value="Sound and Music" class="mr-2">
+                                Sound and Music
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" name="services[]" value="Decorations" class="mr-2">
+                                Decorations
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" name="services[]" value="Catering" class="mr-2">
+                                Catering
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" name="services[]" value="Photography and Videography" class="mr-2">
+                                Photography and Videography
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" name="services[]" value="MakeUp" class="mr-2">
+                                MakeUp
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" name="services[]" value="Mehndi" class="mr-2">
+                                Mehndi
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" name="services[]" value="Venue Setup" class="mr-2">
+                                Venue Setup
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" name="services[]" value="Custom Requests" class="mr-2">
+                                Custom Requests
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="event-date" class="block mb-2 font-semibold">Event Date</label>
+                        <input type="date" id="event-date" name="event-date" class="w-full p-2 border rounded">
+                    </div>
+                    <div class="mb-4">
+                        <label for="event-location" class="block mb-2 font-semibold">Event Location</label>
+                        <input type="text" id="event-location" name="event-location" class="w-full p-2 border rounded" placeholder="Enter event location">
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700 transition duration-300">Submit Booking</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-16 bg-yellow-50">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12">What Our Customers Say</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <p class="mb-4">"Karnataka Event Services made our wedding day absolutely perfect. The decorations were stunning, and the food was delicious!"</p>
+                        <p class="font-semibold">- Priya & Rahul</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <p class="mb-4">"The sound system for our corporate event was top-notch. Very professional service!"</p>
+                        <p class="font-semibold">- Bangalore Tech Solutions</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <p class="mb-4">"The photographers captured every special moment of our daughter's birthday. We'll cherish these memories forever."</p>
+                        <p class="font-semibold">- The Kumar Family</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-16 bg-gradient-to-b from-red-50 to-purple-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12 text-purple-900 relative">
+                    About Us
+                    <div class="absolute w-full h-full border-2 border-red-600 inset-0 rounded-lg animate-border-dance"></div>
+                </h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                            <h3 class="text-2xl font-semibold text-red-600 mb-4">Our Story</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                Indraprastha is an event management team established in 2024. With a dedicated team and a passion for creating unforgettable moments, we specialize in organizing all types of events.
+                            </p>
+                        </div>
+                        <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                            <h3 class="text-2xl font-semibold text-purple-900 mb-4">Our Mission</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                Our mission is to make every celebration stress-free, seamless, and tailored to your unique vision. From small family gatherings to grand weddings and corporate events, we bring expertise and creativity to every occasion.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-8 bg-white p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300">
+                        <div class="flex flex-wrap justify-center gap-8 mb-8">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-3xl font-bold text-red-600 counter" data-target="30">0</span>
+                                <span class="text-gray-600">Events Completed</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="text-3xl font-bold text-purple-900 counter" data-target="25">0</span>
+                                <span class="text-gray-600">Happy Clients</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="text-3xl font-bold text-red-600 counter" data-target="8">0</span>
+                                <span class="text-gray-600">Team Members</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            With our commitment to excellence and attention to detail, Indraprastha ensures that your event is handled with professionalism and care, making your special moments truly unforgettable.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-gray-100">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12">Contact Us</h2>
+                <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block mb-2 font-semibold">Name</label>
+                            <input type="text" id="name" name="name" class="w-full p-2 border rounded" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block mb-2 font-semibold">Email</label>
+                            <input type="email" id="email" name="email" class="w-full p-2 border rounded" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block mb-2 font-semibold">Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full p-2 border rounded" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700 transition duration-300">Send Message</button>
+                    </form>
+                    <div class="mt-8 flex justify-center space-x-4">
+                        <a href="https://wa.me/8618775670" target="_blank" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 transition duration-300">WhatsApp Us</a>
+                        <a href="tel:+918618775670" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">Call Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-red-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Indraprastha. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Language switcher functionality
+        const languageSelect = document.getElementById('language-select');
+        languageSelect.addEventListener('change', (e) => {
+            const lang = e.target.value;
+            // Here you would implement the logic to switch the language
+            console.log(`Language switched to ${lang}`);
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            navMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768) { // 768px is the md breakpoint
+                    navMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Handle resize events
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                navMenu.classList.remove('hidden');
+            } else {
+                navMenu.classList.add('hidden');
+            }
+        });
+
+        // Standalone Counter Script
+        window.addEventListener('load', function() {
+            const counters = document.querySelectorAll('.counter');
+            let started = false;
+
+            function startCount(counter) {
+                const target = parseInt(counter.dataset.target);
+                let count = 0;
+                const speed = 1000 / target; // Adjust speed based on target number
+
+                const updateCount = () => {
+                    if (count < target) {
+                        count++;
+                        counter.innerText = count;
+                        setTimeout(updateCount, speed);
+                    }
+                };
+
+                updateCount();
+            }
+
+            function checkScroll() {
+                if (started) return;
+                
+                const triggerBottom = window.innerHeight * 0.8;
+                const counterSection = document.querySelector('.counter').getBoundingClientRect().top;
+
+                if (counterSection < triggerBottom) {
+                    counters.forEach(counter => startCount(counter));
+                    started = true;
+                    window.removeEventListener('scroll', checkScroll);
+                }
+            }
+
+            window.addEventListener('scroll', checkScroll);
+            checkScroll(); // Check initial position
+        });
+    </script>
+</body>
+</html>
