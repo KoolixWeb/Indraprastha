@@ -60,30 +60,32 @@
 <!-- Cursor ai code -->
 <header class="bg-purple-900 text-white p-4 shadow-md">
     <div class="container mx-auto flex justify-between items-center">
-        <h1 class="text-2xl font-bold">Indraprastha Events</h1>
+        <!-- Logo/Title -->
+        <h1 class="text-xl sm:text-2xl font-bold">Indraprastha Events</h1>
         
         <!-- Mobile menu button -->
-        <button id="mobile-menu-button" class="md:hidden p-2">
+        <button id="mobile-menu-button" class="md:hidden p-2 focus:outline-none">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
 
-        <!-- Navigation menu - hidden on mobile by default -->
-        <nav id="nav-menu" class="hidden md:block absolute md:relative top-16 md:top-0 left-0 right-0 md:left-auto md:right-auto bg-purple-900 md:bg-transparent p-4 md:p-0">
-            <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
-                <li><a href="#home" class="block hover:text-yellow-300">Home</a></li>
-                <li><a href="#services" class="block hover:text-yellow-300">Services</a></li>
-                <li><a href="#booking" class="block hover:text-yellow-300">Book Now</a></li>
-                <li><a href="#about" class="block hover:text-yellow-300">About Us</a></li>
-                <li><a href="#contact" class="block hover:text-yellow-300">Contact</a></li>
+        <!-- Navigation menu -->
+        <nav id="nav-menu" class="hidden md:flex absolute md:static top-16 left-0 right-0 bg-purple-900 md:bg-transparent p-4 md:p-0 w-full md:w-auto z-10">
+            <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 text-sm sm:text-base">
+                <li><a href="#home" class="block hover:text-yellow-300 transition-colors duration-200">Home</a></li>
+                <li><a href="#services" class="block hover:text-yellow-300 transition-colors duration-200">Services</a></li>
+                <li><a href="#booking" class="block hover:text-yellow-300 transition-colors duration-200">Book Now</a></li>
+                <li><a href="#about" class="block hover:text-yellow-300 transition-colors duration-200">About Us</a></li>
+                <li><a href="#contact" class="block hover:text-yellow-300 transition-colors duration-200">Contact</a></li>
             </ul>
         </nav>
-
-        <select id="language-select" class="bg-red-700 text-white p-2 rounded">
-            <option value="en">English</option>
-            <option value="kn">Kannada</option>
-        </select>
+        <!-- Language select -->
+        <a href="Gallery.html" class="hover:underline">
+            <div id="language-select" class="inline-block bg-gradient-to-br from-blue-500 to-purple-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-lg font-semibold uppercase tracking-wide shadow-lg hover:shadow-xl hover:-translate-y-1 hover:from-blue-400 hover:to-purple-500 transition-all duration-300 animate-pulseCustom text-xs sm:text-sm lg:text-base">
+            Gallery
+            </div>
+        </a>
     </div>
 </header>
 <main>
@@ -333,7 +335,7 @@
 
     <footer class="bg-red-800 text-white py-8">
         <div class="container mx-auto text-center">
-            <p>&copy; 2025 Indraprastha. All rights reserved.</p>
+            <p>&copy; Made by Koolix⭕ with love 💓.</p>
         </div>
     </footer>
 
@@ -419,5 +421,6 @@
             checkScroll(); // Check initial position
         });
     </script>
+    <script src="script.js"></script>
 </body>
 </html>
